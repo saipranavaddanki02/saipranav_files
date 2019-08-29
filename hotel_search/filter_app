@@ -1,0 +1,328 @@
+#include<iostream>
+int c1,ch;
+char rt,rf;
+char a1,a2;
+
+using namespace std;
+class cost
+{
+public:
+        void putdata(void);
+        int compare(int c1);
+};
+
+void cost::putdata(void)
+{	
+cout<<"\nenter cost\n";	
+cin>>c1;	
+cout<<"\n loading please wait.....";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\nhotels are yet to show..........\n";
+compare(c1);
+}
+int cost::compare(int c1) 
+{
+cout<<"\n hotels are given based on cost as you entered\n";
+if((c1>=5000)&&(c1<=6000))
+{
+cout<<"\nfairfield hotel is better for 5000\n";
+return c1;
+}
+else if((c1>=6000)&&(c1<=8000))
+{
+cout<<"\n fourpoints hotel is better for 6000\n";
+return c1;
+}
+else 
+{
+cout<<"\ngateway hotel is better for other above amounts or contact our customer care:00882233963\n";
+return c1;	
+}
+
+}
+class  roomtype
+{
+public:	
+void putdata(void);
+char compare1( char rt);	
+};
+void roomtype::putdata(void)
+{
+cout<<"enter roomtype";//s-suit,d-deluxe,l-luxury//	
+cin>>rt;
+cout<<"\n loading please wait.....";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\n";
+cout<<"\nhotels are yet to show..........\n";
+compare1(rt);
+}
+char roomtype::compare1( char rt) 
+{
+cout<<"\n hotels are given based on your room type\n ";
+if(rt=='s')
+{
+cout<<"\n novotel and fairfeild are available\n";
+return rt;
+}
+else if(rt=='l')
+{
+
+cout<<"\n four point is available near to you";	
+return rt;	
+}	
+else 
+{
+cout<<"\n rajadhani hotel is the only left option";	
+}
+ }
+class aircond	
+{
+public:
+void putdata(void);
+char compare2(char a1);	
+};
+void aircond::putdata(void)
+{
+cout<<"\n enter type of air conditioning";	
+cin>>a1;
+} 
+char aircond::compare2(char a1)
+{
+
+cout<<"\nroom available on airconditioner types";
+if(a1=='a')
+{
+cout<<"\nnovotel gateway contains central ac\n";	
+return a1;
+}
+ else 
+ {
+ cout<<"\n rajadhani hotel and four point are non ac";
+ return a1;	
+ }
+ }	
+class restaurants
+{
+public:
+void putdata(void);
+char compare3(char a2);	
+};
+void restaurants::putdata(void)
+{	
+cout<<"\n enter type of food required";	
+cin>>a2;
+} 
+char restaurants::compare3(char a2)
+{
+
+cout<<"\nroom available on restaurants with veg and non-veg";
+if(a2=='n')
+{
+cout<<"\nnovotel gateway contains non veg hotels\n";	
+return a2;
+}
+ else 
+ {
+ cout<<"\n rajadhani hotel and four point are veg hotels";
+ return a2;	
+ }
+ }	
+
+main()
+{
+int x;
+cost b;
+aircond y;
+roomtype ro;
+restaurants rt;
+int v,y2,y3;
+cout<<"\t\t\t\t\t\t\t\t\t\n#############################################\n\t\t\t\t\t\t\t\t";
+cout<<"\t\t\t\t\t\t\t\t\t\n#                                           #\n\t\t\t\t\t\t\t\t";
+cout<<"\t\t\t\t\t\t\t\t\t\n#....WELCOME ORIGIN HOTEL SEARCH ENGINE....#\n\t\t\t\t\t\t\t\t";
+cout<<"\t\t\t\t\t\t\t\t\t\n#                                           #\n\t\t\t\t\t\t\t\t";
+cout<<"\t\t\t\t\t\t\t\t\t\n#############################################\n\t\t\t\t\t\t\t\t";
+cout<<"\n searching criteria is based on tarrif or room type or air conditioning and facilities\n";
+do
+{
+cout<<"\n 1-cost,2-room type,3-ac or non ac,4-restaurants with food type\n";
+cin>>ch;	
+switch(ch)
+{
+case 1:
+b.putdata();
+v=b.compare(c1);
+break;
+case 2:
+cout<<"\n s for suit room,l for luxury , d for delux";
+ro.putdata();
+cout<<"\n avaible hotels containg rooms are shown:\n";
+ro.compare1(rf);	
+break;
+case 3:
+cout<<"\n a=ac(air conditioner),n=non ac\n";
+y.putdata();
+y2=y.compare2(a1);
+break;
+case 4:
+cout<<"\n n=non-veg is AVAIL, v or any characters denote VEGETERIAN";
+rt.putdata();
+y3=rt.compare3(a2);
+
+
+break;
+default:cout<<"for any quireis contact our customer care::::: PRATHEEK SIR(C.E.O)->9581141147\n";
+}cout<<"\n PLEASE VISIT WEBSITE AGAIN TO SUPPORT US\n";
+cout<<"\n enter 1 to continue, 0 to exit\n";
+cin>>x;	
+}while(x);
+}
+
+On Mon, Jul 8, 2019 at 7:25 PM Rachana kadiam <rachanakadiam@gmail.com> wrote:
+#include<iostream>
+int c1,ch;
+char rt;
+char a1;
+
+using namespace std;
+class cost
+{
+public:
+        void putdata(void);
+        int compare(int c1);
+};
+
+void cost::putdata(void)
+{
+cout<<"\nenter cost\n";	
+cin>>c1;	
+cout<<"\nhotels are yet to show\n";
+compare(c1);
+}
+int cost::compare(int c1) 
+{
+cout<<"\n hotels are given based on cost as you entered\n";
+if((c1>=5000)&&(c1<=6000))
+{
+cout<<"\nfairfield hotel is better for 5000\n";
+return c1;
+}
+else if((c1>=6000)&&(c1<=8000))
+{
+cout<<"\n fourpoints hotel is better for 6000\n";
+return c1;
+}
+else 
+{
+cout<<"\ngateway hotel is better for other above amounts or contact our customer care:00882233963\n";
+return c1;	
+}
+
+}
+class  roomtype
+{
+public:	
+void putdata(void);
+char compare1( char rt);	
+};
+void roomtype::putdata(void)
+{
+cout<<"enter roomtype";//s-suit,d-deluxe,l-luxury//	
+cin>>rt;
+cout<<"\n rooms are yet to show \n";
+compare1(rt);
+}
+char roomtype::compare1( char rt) 
+{
+cout<<"\n hotels are given based on your room type\n ";
+if(rt=='s')
+{
+cout<<"\n novotel and fairfeild are available\n";
+return rt;
+}
+else if(rt=='l')
+{
+
+cout<<"\n four point is available near to you";	
+return rt;	
+}	
+else 
+{
+cout<<"\n rajadhani hotel is the only left option";	
+}
+ }
+class aircond	
+{
+public:
+void putdata(void);
+char compare2(char a1);	
+};
+void aircond::putdata(void)
+{
+cout<<"\n enter type of air conditioning";	
+cin>>a1;	
+ } 
+char aircond::compare2(char a1)
+{
+cout<<"\nroom available on aircondition";
+if(a1=='a')
+{
+cout<<"\nnovotel gateway contains central ac\n";	
+return a1;
+}
+ else 
+ {
+ cout<<"\n rajadhani hotel and four point are non ac";
+ return a1;	
+ }
+ }	
+
+
+main()
+{
+int x;
+cost b;
+aircond y;
+roomtype ro;
+int v,y2;
+cout<<"\n#############################################\n";
+cout<<"\n#                                           #\n";
+cout<<"\n#...WELCOME ORIGIN HOTEL SEARCH ENGINE......#\n";
+cout<<"\n#                                           #\n";
+cout<<"\n#############################################\n";
+cout<<"\n searching criteria is based on tarrif or room type or air conditioning and facilities\n";
+do
+{
+cout<<"\n 1-cost,2-room type,3-ac or non ac\n";
+cin>>ch;	
+
+switch(ch)
+{
+
+case 1:
+b.putdata();
+v=b.compare(c1);
+break;
+case 2:
+cout<<"\n s for suit room,l for luxury , d for delux";
+ro.putdata();
+cout<<"\n avaible hotels containg rooms are shown:\n";
+ro.compare1(rt);	
+break;
+case 3:
+cout<<"\n a=ac(air conditioner),n=non ac\n";
+y.putdata();
+y2=y.compare2(a1);
+break;
+default:cout<<"for any quireis contact our customer care::::: PRATHEEK SIR(C.E.O)->9581141147\n";
+}cout<<"\n PLEASE VISIT WEBSITE AGAIN TO SUPPORT US\n";
+cout<<"\n enter 1 to continue, 0 to exit\n";
+cin>>x;	
+}while(x);
+}
